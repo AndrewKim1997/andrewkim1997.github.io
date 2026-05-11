@@ -464,3 +464,51 @@ body {
     gap: 12px;
   }
 }
+
+/* Contact page */
+
+.contact-list {
+  display: grid;
+  gap: 24px;
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-item i {
+  margin-top: 4px;
+  color: var(--blue);
+  font-size: 22px;
+  text-align: center;
+}
+
+.contact-item h3 {
+  margin: 0 0 4px;
+  font-size: 19px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.contact-item p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.contact-item a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
