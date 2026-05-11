@@ -25,7 +25,11 @@ body {
   line-height: 1.6;
 }
 
-/* Top navigation */
+a {
+  color: var(--blue);
+}
+
+/* Navigation */
 
 .top-nav {
   position: sticky;
@@ -43,8 +47,10 @@ body {
 }
 
 .nav-name {
+  color: var(--text);
+  text-decoration: none;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .nav-links {
@@ -58,14 +64,15 @@ body {
   font-size: 13px;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--blue);
 }
 
-/* Page layout */
+/* Home */
 
-.page {
-  max-width: 1160px;
+.home-page {
+  max-width: 1120px;
   margin: 0 auto;
   padding: 56px 36px 80px;
   display: grid;
@@ -73,9 +80,7 @@ body {
   gap: 72px;
 }
 
-/* Sidebar */
-
-.sidebar {
+.profile-panel {
   position: sticky;
   top: 92px;
   align-self: start;
@@ -91,7 +96,7 @@ body {
   border: 1px solid var(--line);
 }
 
-.sidebar h1 {
+.profile-panel h1 {
   margin: 0;
   font-size: 30px;
   font-weight: 600;
@@ -101,7 +106,6 @@ body {
 
 .role {
   margin: 12px 0 0;
-  color: var(--text);
   font-size: 15px;
   font-weight: 500;
 }
@@ -113,32 +117,61 @@ body {
   line-height: 1.5;
 }
 
-.social-links {
+.profile-links {
   margin-top: 22px;
   display: flex;
   flex-direction: column;
   gap: 9px;
 }
 
-.social-links a {
+.profile-links a {
   color: var(--blue);
   text-decoration: none;
   font-size: 14px;
 }
 
-.social-links a:hover {
+.profile-links a:hover {
   text-decoration: underline;
 }
 
-/* Main content */
-
-.content {
+.home-content {
   min-width: 0;
 }
 
+/* Sub pages */
+
+.sub-page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 64px 36px 90px;
+}
+
+.page-header {
+  padding-bottom: 36px;
+  margin-bottom: 44px;
+  border-bottom: 1px solid var(--line);
+}
+
+.page-header h1 {
+  margin: 0 0 12px;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+}
+
+.page-header p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 19px;
+}
+
+/* Content */
+
 .content-section {
-  padding-bottom: 52px;
-  margin-bottom: 52px;
+  padding-bottom: 44px;
+  margin-bottom: 44px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -149,7 +182,7 @@ body {
 
 .content-section h2 {
   margin: 0 0 18px;
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 600;
   line-height: 1.14;
   letter-spacing: -0.04em;
@@ -160,15 +193,38 @@ body {
   margin: 0 0 16px;
 }
 
-/* Interests */
+.compact-section {
+  padding-bottom: 36px;
+  margin-bottom: 36px;
+}
 
-.interest-list {
+.two-column-list {
+  columns: 2;
+  column-gap: 48px;
   margin: 0;
   padding-left: 20px;
 }
 
-.interest-list li {
+.two-column-list li {
   margin-bottom: 8px;
+  break-inside: avoid;
+}
+
+/* Education */
+
+.education-item {
+  margin-bottom: 18px;
+}
+
+.education-item h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.education-item p {
+  margin: 0;
+  color: var(--muted);
 }
 
 /* Publications */
@@ -178,7 +234,7 @@ body {
   border-bottom: 1px solid var(--line);
 }
 
-.publication:first-of-type {
+.publication:first-child {
   padding-top: 0;
 }
 
@@ -209,12 +265,20 @@ body {
   font-size: 14px;
 }
 
-/* Projects */
+.pub-links a:hover {
+  text-decoration: underline;
+}
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+/* Research / Projects */
+
+.research-item {
+  margin-bottom: 30px;
+}
+
+.research-item h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .project-card {
@@ -222,18 +286,17 @@ body {
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 24px;
+  margin-bottom: 18px;
 }
 
 .project-card h3 {
-  margin: 0 0 10px;
-  font-size: 20px;
+  margin: 0 0 8px;
+  font-size: 21px;
   font-weight: 600;
 }
 
 .project-card p {
-  margin: 0;
   color: var(--muted);
-  font-size: 15px;
 }
 
 /* Button */
@@ -255,7 +318,7 @@ body {
   background: var(--blue-hover);
 }
 
-/* Responsive */
+/* Mobile */
 
 @media (max-width: 860px) {
   .top-nav {
@@ -266,20 +329,24 @@ body {
     gap: 14px;
   }
 
-  .page {
+  .home-page {
     grid-template-columns: 1fr;
     gap: 40px;
     padding: 40px 24px 72px;
   }
 
-  .sidebar {
+  .profile-panel {
     position: static;
     max-width: 520px;
     margin: 0 auto;
   }
 
-  .project-grid {
-    grid-template-columns: 1fr;
+  .sub-page {
+    padding: 48px 24px 72px;
+  }
+
+  .two-column-list {
+    columns: 1;
   }
 }
 
@@ -297,8 +364,8 @@ body {
     gap: 10px 16px;
   }
 
-  .page {
-    padding: 32px 20px 64px;
+  .page-header h1 {
+    font-size: 36px;
   }
 
   .content-section h2 {
