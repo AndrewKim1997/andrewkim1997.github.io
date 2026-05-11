@@ -9,21 +9,22 @@
 <body>
 
   <nav class="top-nav">
-    <div class="nav-name">Andrew Kim</div>
+    <a class="nav-name" href="index.html">Andrew Kim</a>
+
     <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#projects">Projects</a>
-      <a href="#cv">CV</a>
-      <a href="#contact">Contact</a>
+      <a class="active" href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
-  <main class="page">
+  <main class="home-page">
 
-    <aside class="sidebar">
-      <img src="profile.png" alt="Andrew Kim" class="profile-photo">
+    <aside class="profile-panel">
+      <img src="profile.jpg" alt="Andrew Kim" class="profile-photo">
 
       <h1>Andrew Kim</h1>
 
@@ -36,7 +37,7 @@
         fairness, uncertainty, and counterfactual explanation.
       </p>
 
-      <div class="social-links">
+      <div class="profile-links">
         <a href="#">Google Scholar</a>
         <a href="#">GitHub</a>
         <a href="#">OpenReview</a>
@@ -44,9 +45,9 @@
       </div>
     </aside>
 
-    <section class="content">
+    <section class="home-content">
 
-      <section id="about" class="content-section">
+      <section class="content-section">
         <h2>Biography</h2>
         <p>
           I am a machine learning researcher interested in developing
@@ -61,10 +62,10 @@
         </p>
       </section>
 
-      <section id="research" class="content-section">
+      <section class="content-section compact-section">
         <h2>Research Interests</h2>
 
-        <ul class="interest-list">
+        <ul class="two-column-list">
           <li>Explainable Artificial Intelligence</li>
           <li>Counterfactual Explanation</li>
           <li>Fairness in Machine Learning</li>
@@ -73,74 +74,18 @@
         </ul>
       </section>
 
-      <section id="publications" class="content-section">
-        <h2>Publications</h2>
+      <section class="content-section compact-section">
+        <h2>Education</h2>
 
-        <div class="publication">
-          <h3>Paper Title Goes Here</h3>
-          <p class="pub-meta">
-            Andrew Kim, Coauthor Name. Conference or Journal, Year.
-          </p>
-          <p>
-            A short one-sentence summary of the paper can be placed here.
-          </p>
-          <div class="pub-links">
-            <a href="#">Paper</a>
-            <a href="#">Code</a>
-            <a href="#">OpenReview</a>
-          </div>
+        <div class="education-item">
+          <h3>M.S. in Computer Science</h3>
+          <p>University Name, Year</p>
         </div>
 
-        <div class="publication">
-          <h3>Another Paper Title Goes Here</h3>
-          <p class="pub-meta">
-            Andrew Kim, Coauthor Name. Preprint, Year.
-          </p>
-          <p>
-            A short description of the research contribution can be placed here.
-          </p>
-          <div class="pub-links">
-            <a href="#">Paper</a>
-            <a href="#">Code</a>
-          </div>
+        <div class="education-item">
+          <h3>B.S. in Computer Science</h3>
+          <p>University Name, Year</p>
         </div>
-      </section>
-
-      <section id="projects" class="content-section">
-        <h2>Projects</h2>
-
-        <div class="project-grid">
-          <article class="project-card">
-            <h3>Sequential Counterfactual Explanation</h3>
-            <p>
-              A research project on generating actionable, stepwise
-              counterfactual explanations under uncertain action dynamics.
-            </p>
-          </article>
-
-          <article class="project-card">
-            <h3>Distributional Global Explanation</h3>
-            <p>
-              A project exploring distributional views of global feature
-              importance and explanation stability.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="cv" class="content-section">
-        <h2>CV</h2>
-        <p>
-          My curriculum vitae is available below.
-        </p>
-        <a class="button" href="#">Download CV</a>
-      </section>
-
-      <section id="contact" class="content-section">
-        <h2>Contact</h2>
-        <p>
-          Email: <a href="mailto:your-email@example.com">your-email@example.com</a>
-        </p>
       </section>
 
     </section>
