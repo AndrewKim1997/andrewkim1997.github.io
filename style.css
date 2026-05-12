@@ -535,3 +535,14 @@ body {
   background: #eef5ff;
   text-decoration: none;
 }
+
+/* Publication metadata */
+
+.pub-authors,
+.pub-venue {
+  display: block;
+}
+
+.pub-venue {
+  margin-top: 3px;
+}
