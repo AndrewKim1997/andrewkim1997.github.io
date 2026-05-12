@@ -512,3 +512,26 @@ body {
 .contact-item a:hover {
   text-decoration: underline;
 }
+
+/* Publication page */
+
+.publication-group h2 {
+  margin-bottom: 24px;
+}
+
+.publication .pub-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--soft-bg);
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.publication .pub-links a:hover {
+  background: #eef5ff;
+  text-decoration: none;
+}
