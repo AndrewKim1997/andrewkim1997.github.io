@@ -11,6 +11,230 @@
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .home-page {
+      align-items: flex-start;
+      gap: 2.5rem;
+    }
+
+    .profile-panel {
+      position: sticky;
+      top: 2rem;
+    }
+
+    .profile-photo {
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .role {
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .affiliation {
+      line-height: 1.65;
+    }
+
+    .profile-icons {
+      margin-top: 1.2rem;
+    }
+
+    .profile-link-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-top: 1.3rem;
+    }
+
+    .profile-link-buttons a {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.62rem 0.8rem;
+      border: 1px solid #d1d5db;
+      border-radius: 999px;
+      text-decoration: none;
+      color: #333;
+      background: #ffffff;
+      font-size: 0.9rem;
+      transition: background 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .profile-link-buttons a:hover {
+      background: #f9fafb;
+      border-color: #9ca3af;
+      transform: translateY(-1px);
+    }
+
+    .hero-section {
+      padding: 2.1rem 2.2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at top right, rgba(79, 70, 229, 0.08), transparent 32%),
+        linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.055);
+    }
+
+    .hero-eyebrow {
+      margin: 0 0 0.75rem 0;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4f46e5;
+    }
+
+    .hero-title {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+      color: #111827;
+    }
+
+    .hero-subtitle {
+      margin-top: 1rem;
+      max-width: 760px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #4b5563;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.25rem;
+    }
+
+    .hero-badges span {
+      display: inline-block;
+      padding: 0.38rem 0.72rem;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.55rem;
+    }
+
+    .hero-actions a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.72rem 1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .hero-actions a.primary {
+      background: #111827;
+      color: #ffffff;
+      border: 1px solid #111827;
+    }
+
+    .hero-actions a.secondary {
+      background: #ffffff;
+      color: #111827;
+      border: 1px solid #d1d5db;
+    }
+
+    .hero-actions a:hover {
+      transform: translateY(-1px);
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .highlight-card {
+      padding: 1.35rem 1.4rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      background: #ffffff;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-2px);
+      border-color: #d1d5db;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.055);
+    }
+
+    .highlight-card .card-icon {
+      width: 2.25rem;
+      height: 2.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: #f3f4f6;
+      color: #111827;
+      margin-bottom: 0.75rem;
+    }
+
+    .highlight-card h3 {
+      margin: 0 0 0.45rem 0;
+      font-size: 1.05rem;
+      color: #111827;
+    }
+
+    .highlight-card p {
+      margin: 0;
+      line-height: 1.65;
+      font-size: 0.94rem;
+      color: #4b5563;
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 0.8rem;
+    }
+
+    .tag-cloud span {
+      display: inline-block;
+      padding: 0.45rem 0.78rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 999px;
+      background: #ffffff;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    .biography-section p {
+      line-height: 1.75;
+    }
+
+    @media (max-width: 900px) {
+      .profile-panel {
+        position: static;
+      }
+
+      .highlight-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-section {
+        padding: 1.6rem 1.4rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -35,12 +259,12 @@
       <h1>Dongseok Kim</h1>
 
       <p class="role">
-        Computer Scientist
+        AI/ML Researcher
       </p>
 
       <p class="affiliation">
-        Artificial Intelligence and Machine Learning researcher working toward
-        transparent, reliable, and responsible intelligent systems.
+        Working on trustworthy machine learning through explainability,
+        uncertainty, fairness, governance, and responsible AI.
       </p>
 
       <div class="profile-icons">
@@ -60,58 +284,150 @@
           <i class="fa-solid fa-envelope"></i>
         </a>
       </div>
+
+      <div class="profile-link-buttons">
+        <a href="https://scholar.google.com/citations?user=QOt0-48AAAAJ" target="_blank" rel="noopener noreferrer">
+          <i class="ai ai-google-scholar"></i>
+          Google Scholar
+        </a>
+
+        <a href="https://github.com/AndrewKim1997" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github"></i>
+          GitHub
+        </a>
+
+        <a href="https://openreview.net/profile?id=%7EDongseok_Kim2" target="_blank" rel="noopener noreferrer">
+          <i class="fa-regular fa-file-lines"></i>
+          OpenReview
+        </a>
+
+        <a href="mailto:jkds5920@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          Email
+        </a>
+      </div>
     </aside>
 
     <section class="home-content">
 
+      <section class="hero-section">
+        <p class="hero-eyebrow">Trustworthy Machine Learning</p>
+
+        <h1 class="hero-title">
+          Building explainable, reliable, and responsible AI systems.
+        </h1>
+
+        <p class="hero-subtitle">
+          I develop theoretically grounded and practically useful methods for
+          trustworthy machine learning, with work spanning explainable AI,
+          uncertainty quantification, ML fairness, AI governance, publications,
+          and patents.
+        </p>
+
+        <div class="hero-badges">
+          <span>TMLR Published</span>
+          <span>Applied Soft Computing Published</span>
+          <span>10+ Patents</span>
+          <span>XAI · UQ · Fairness</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="primary" href="publications.html">
+            <i class="fa-regular fa-file-lines"></i>
+            View Publications
+          </a>
+
+          <a class="secondary" href="patents.html">
+            <i class="fa-regular fa-lightbulb"></i>
+            View Patents
+          </a>
+
+          <a class="secondary" href="cv.html">
+            <i class="fa-regular fa-address-card"></i>
+            View CV
+          </a>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Selected Highlights</h2>
+
+        <div class="highlight-grid">
+
+          <article class="highlight-card">
+            <div class="card-icon">
+              <i class="fa-regular fa-file-lines"></i>
+            </div>
+
+            <h3>Publications</h3>
+            <p>
+              Published research in Transactions on Machine Learning Research
+              and Applied Soft Computing, with additional manuscripts under
+              review and preprints.
+            </p>
+          </article>
+
+          <article class="highlight-card">
+            <div class="card-icon">
+              <i class="fa-regular fa-lightbulb"></i>
+            </div>
+
+            <h3>Patents</h3>
+            <p>
+              Patent records covering AI healthcare, federated learning,
+              multimodal systems, metaverse environments, and medical data
+              analysis.
+            </p>
+          </article>
+
+          <article class="highlight-card">
+            <div class="card-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <h3>Research Direction</h3>
+            <p>
+              Research focused on trustworthy AI methods that connect
+              explainability, uncertainty, fairness, governance, and responsible
+              deployment.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Research Focus</h2>
+
+        <div class="tag-cloud">
+          <span>Explainable AI</span>
+          <span>Uncertainty Quantification</span>
+          <span>ML Fairness</span>
+          <span>AI Governance</span>
+          <span>AI Ethics</span>
+          <span>Trustworthy AI</span>
+          <span>Responsible Machine Learning</span>
+        </div>
+      </section>
+
       <section class="content-section biography-section">
         <h2>Biography</h2>
+
         <p>
           I am a researcher working on Artificial Intelligence and Machine Learning,
           with a focus on developing general-purpose methods and frameworks that are
           theoretically grounded, practically meaningful, and broadly applicable across
-          domains. My research interests include eXplainable AI (XAI), Uncertainty
-          Quantification (UQ), ML Fairness, AI Governance, and AI Ethics.
+          domains.
         </p>
+
         <p>
           I view trustworthy AI as an interdisciplinary challenge that connects
-          technical performance, uncertainty, fairness, ethics, and governance. Drawing
-          on ideas from Mathematics, Statistics, Computer Science, and real-world
-          institutional contexts, I aim to develop rigorous and useful methods for
-          building AI systems that are interpretable, reliable, fair, accountable, and
-          responsible.
+          technical performance, uncertainty, fairness, ethics, and governance.
+          Drawing on ideas from Mathematics, Statistics, Computer Science, and
+          real-world institutional contexts, I aim to develop rigorous and useful
+          methods for building AI systems that are interpretable, reliable, fair,
+          accountable, and responsible.
         </p>
-      </section>
-      
-      <section class="content-section compact-section">
-        <div class="info-grid">
-
-          <div class="info-block">
-            <h2>Research Interests</h2>
-            <ul class="interest-list">
-              <li>Explainable AI</li>
-              <li>Uncertainty Quantification</li>
-              <li>ML Fairness</li>
-              <li>AI Governance</li>
-              <li>AI Ethics</li>
-            </ul>
-          </div>
-
-          <div class="info-block">
-            <h2>Education</h2>
-
-            <div class="education-item">
-              <h3>Master's Degree</h3>
-              <p>Computer Engineering, Gachon University, 2025</p>
-            </div>
-            
-            <div class="education-item">
-              <h3>Bachelor's Degree</h3>
-              <p>Applied Statistics, Computer Engineering, Gachon University, 2023</p>
-            </div>
-          </div>
-
-        </div>
       </section>
 
     </section>
@@ -119,4 +435,5 @@
   </main>
 
 </body>
+</html>
 </html>
