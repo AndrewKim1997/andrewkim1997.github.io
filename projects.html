@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | Dongseok Kim</title>
+  <title>Patents | Dongseok Kim</title>
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -11,6 +11,78 @@
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .patent-summary {
+      margin-bottom: 2rem;
+    }
+
+    .patent-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .patent-card {
+      padding: 1.4rem 1.5rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      background: #ffffff;
+    }
+
+    .patent-card h2 {
+      margin-top: 0.6rem;
+      margin-bottom: 0.4rem;
+      font-size: 1.15rem;
+      line-height: 1.45;
+    }
+
+    .patent-title-en {
+      margin-top: 0;
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .patent-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    .patent-status {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .patent-status.registered {
+      background: #e8f5ee;
+      color: #166534;
+    }
+
+    .patent-status.published {
+      background: #eef2ff;
+      color: #3730a3;
+    }
+
+    .patent-details {
+      margin-top: 0.8rem;
+      padding-left: 1.2rem;
+      line-height: 1.6;
+      font-size: 0.92rem;
+    }
+
+    .patent-description {
+      margin-top: 0.8rem;
+      line-height: 1.65;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,7 +93,7 @@
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
       <a href="publications.html">Publications</a>
-      <a class="active" href="projects.html">Projects</a>
+      <a class="active" href="patents.html">Patents</a>
       <a href="cv.html">CV</a>
       <a href="contact.html">Contact</a>
     </div>
@@ -30,22 +102,286 @@
   <main class="sub-page">
 
     <section class="page-header">
-      <h1>Projects</h1>
+      <h1>Patents</h1>
       <p>
-        Selected research projects and related materials will be added here.
+        Selected patent applications and registrations in artificial intelligence,
+        healthcare, multimodal systems, metaverse environments, and medical data analysis.
+      </p>
+    </section>
+
+    <section class="content-section patent-summary">
+      <h2>Overview</h2>
+      <p>
+        This page lists 10 patent records, including 7 registered patents and
+        3 published patent applications. These patents cover AI-based healthcare,
+        federated learning, medical prediction, multimodal metaverse systems,
+        medical twins, cognitive rehabilitation dialogue, care robots, and
+        3D organ modeling.
       </p>
     </section>
 
     <section class="content-section">
-      <h2>Coming Soon</h2>
-      <p>
-        This page is currently under preparation. Publicly available research
-        projects, code, demos, and related materials will be posted here in the
-        future.
-      </p>
+      <h2>Patent List</h2>
+
+      <div class="patent-list">
+
+        <article class="patent-card">
+          <div class="patent-meta">
+            <span class="patent-status published">Published</span>
+            <span>Application No. 1020240070588</span>
+            <span>Application Date: 2024.05.30</span>
+            <span>Publication No. 1020250172993</span>
+            <span>Publication Date: 2025.12.10</span>
+          </div>
+
+          <h2>서버시스템 및 돌봄로봇을 통한 고령자보호자에 대한 돌봄정보 제공방법, 및 이를 구현하기 위한 컴퓨터-판독가능 저장매체</h2>
+          <p class="patent-title-en">
+            <em>The method of providing care information for elderly guardians through a server system and care robot, and a computer-readable storage medium for implementing that</em>
+          </p>
+
+          <p class="patent-description">
+            A server-system and care-robot method for providing care information to elderly guardians by using interaction histories, voice-based branching conditions, explanatory texts, and stored rehabilitation-content records.
+          </p>
+
+          <ul class="patent-details">
+            <li><strong>Applicant:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
+            <li><strong>Inventors:</strong> 황보택근, 오기성, 정원준, 최형선, <strong>김동석</strong></li>
+            <li><strong>IPC:</strong> G06Q50/22, G06F16/35, G10L15/26, G06V40/18, G06F16/332, G06V10/77, B25J11/00</li>
+          </ul>
+        </article>
+
+        <article class="patent-card">
+          <div class="patent-meta">
+            <span class="patent-status registered">Registered</span>
+            <span>Application No. 1020230083215</span>
+            <span>Application Date: 2023.06.28</span>
+            <span>Registration No. 1029528850000</span>
+            <span>Registration Date: 2026.04.10</span>
+          </div>
+
+          <h2>멀티모달 기반 메타버스 상 힐링콘텐츠 배경음 구현 시스템, 방법 및 컴퓨터-기록가능 매체</h2>
+          <p class="patent-title-en">
+            <em>Healing content background sound implementation system, method and computer-recordable medium on multimodal based metaverse</em>
+          </p>
+
+          <p class="patent-description">
+            A multimodal metaverse system that generates healing-content background sound by constructing a metaverse space from reference images and environmental text, then synthesizing background sound based on user biosignals and first-person-view images.
+          </p>
+
+          <ul class="patent-details">
+            <li><strong>Applicant / Assignee:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
+            <li><strong>Inventors:</strong> 황보택근, 오기성, 김제현, 정원준, 최형선, 한일겸, <strong>김동석</strong></li>
+            <li><strong>Publication No.:</strong> 1020250001091</li>
+            <li><strong>Publication Date:</strong> 2025.01.06</li>
+          </ul>
+        </article>
+
+        <article class="patent-card">
+          <div class="patent-meta">
+            <span class="patent-status registered">Registered</span>
+            <span>Application No. 1020230065181</span>
+            <span>Application Date: 2023.05.19</span>
+            <span>Registration No. 1028921560000</span>
+            <span>Registration Date: 2025.11.24</span>
+          </div>
+
+          <h2>연합학습에 필요한 의료데이터를 증강하는 방법 및 이를 수행하는 시스템, 컴퓨터-판독가능 매체</h2>
+          <p class="patent-title-en">
+            <em>The method that augment medical data required for federated learning, and the system and computer-readable medium for performing the same</em>
+          </p>
+
+          <p class="patent-description">
+            A medical-data augmentation method for federated learning that generates local statistical data from distributed medical records, combines them into global statistics with different weights, and creates augmented medical data using random-number-based sampling.
+          </p>
+
+          <ul class="patent-details">
+            <li><strong>Applicant / Assignee:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
+            <li><strong>Inventors:</strong> 황보택근, 오기성, 김제현, 정원준, 최형선, 한일겸, <strong>김동석</strong></li>
+            <li><strong>Publication No.:</strong> 1020240167312</li>
+            <li><strong>Publication Date:</strong> 2024.11.26</li>
+          </ul>
+        </article>
+
+        <article class="patent-card">
+          <div class="patent-meta">
+            <span class="patent-status published">Published</span>
+            <span>Application No. 1020240086864</span>
+            <span>Application Date: 2024.07.02</span>
+            <span>Publication No. 1020260004804</span>
+            <span>Publication Date: 2026.01.09</span>
+          </div>
+
+          <h2>영상 기반 장기 내부 3D 모델링 방법, 시스템 및 컴퓨터-판독가능 매체</h2>
+          <p class="patent-title-en">
+            <em>The method, system, and computer-readable medium for internal organ 3D modeling based video</em>
+          </p>
+
+          <p class="patent-description">
+            A video-based internal-organ 3D modeling method that extracts endoscopic images from RGB-D camera footage and generates 3D modeling data using SfM, 3D Gaussian splatting, voxel data, feature maps, and mesh reconstruction.
+          </p>
+
+          <ul class="patent-details">
+            <li><strong>Applicant:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
+            <li><strong>Inventors:</strong> 황보택근, 오기성, 정원준, 최형선, <strong>김동석</strong></li>
+            <li><strong>IPC:</strong> G06T17/20, G06T7/90, G06T7/50, G06T7/73, G06T15/08, G06T19/20</li>
+          </ul>
+        </article>
+
+        <article class="patent-card">
+          <div class="patent-meta">
+            <span class="patent-status registered">Registered</span>
+            <span>Application No. 1020230083212</span>
+            <span>Application Date: 2023.06.28</span>
+            <span>Registration No. 1026123200000</span>
+            <span>Registration Date: 2023.12.06</span>
+          </div>
+
+          <h2>멀티모달 기반 메타버스 환경 구현 시스템, 방법, 및 컴퓨터-기록가능 매체</h2>
+          <p class="patent-title-en">
+            <em>Multimodal-based metaverse environment implementation system, method and computer-recordable medium</em>
+          </p>
+
+          <p class="patent-description">
+            A multimodal metaverse environment implementation system that derives spatial images from reference images and environmental text, retrieves matching 3D modeling files, and arranges them to construct a metaverse environment.
+          </p>
+
+          <ul class="patent-details">
+            <li><strong>Applicant / Assignee:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
+            <li><strong>Inventors:</strong> 황보택근, 오기성, 김제현, 정원준, 최형선, 한일겸, <strong>김동석</strong></li>
+            <li><strong>Citations:</strong> 1</li>
+          </ul>
+        </article>
+
+        <article class="patent-card">
+          <div class="patent-meta">
+            <span class="patent-status registered">Registered</span>
+            <span>Application No. 1020230083213</span>
+            <span>Application Date: 2023.06.28</span>
+            <span>Registration No. 1026998860000</span>
+            <span>Registration Date: 2024.08.23</span>
+          </div>
+
+          <h2>멀티모달 기반 메타버스 상 메디컬 트윈 소리 구현 시스템, 방법, 및 컴퓨터-기록가능 매체</h2>
+          <p class="patent-title-en">
+            <em>Medical twin sound realization system, method, and computer-recordable medium on multimodal-based metaverse</em>
+          </p>
+
+          <p class="patent-description">
+            A multimodal metaverse medical-twin sound system that constructs a metaverse environment and implements medical-device operation sounds and surrounding environmental sounds when medical devices and patients are present.
+          </p>
+
+          <ul class="patent-details">
+            <li><strong>Applicant / Assignee:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
+            <li><strong>Inventors:</strong> 황보택근, 오기성, 김제현, 정원준, 최형선, 한일겸, <strong>김동석</strong></li>
+          </ul>
+        </article>
+
+        <article class="patent-card">
+          <div class="patent-meta">
+            <span class="patent-status registered">Registered</span>
+            <span>Application No. 1020230083217</span>
+            <span>Application Date: 2023.06.28</span>
+            <span>Registration No. 1026123210000</span>
+            <span>Registration Date: 2023.12.06</span>
+          </div>
+
+          <h2>멀티모달 기반 메타버스 상 NPC동작 구현 시스템, 방법, 및 컴퓨터-기록가능 매체</h2>
+          <p class="patent-title-en">
+            <em>System, method, and computer-recordable medium for implementing NPC actions on a multimodal-based metaverse</em>
+          </p>
+
+          <p class="patent-description">
+            A multimodal metaverse NPC-action implementation system that constructs a metaverse space from reference images and environmental text, then implements NPC avatar actions based on received action text.
+          </p>
+
+          <ul class="patent-details">
+            <li><strong>Applicant / Assignee:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
+            <li><strong>Inventors:</strong> 황보택근, 오기성, 김제현, 정원준, 최형선, 한일겸, <strong>김동석</strong></li>
+          </ul>
+        </article>
+
+        <article class="patent-card">
+          <div class="patent-meta">
+            <span class="patent-status registered">Registered</span>
+            <span>Application No. 1020230065177</span>
+            <span>Application Date: 2023.05.19</span>
+            <span>Registration No. 1028921540000</span>
+            <span>Registration Date: 2025.11.24</span>
+          </div>
+
+          <h2>PHR정보로부터 의료예측정보를 추론하는 방법 및 이를 수행하는 시스템, 컴퓨터-판독가능매체</h2>
+          <p class="patent-title-en">
+            <em>The method that infer medical prediction information, and the system and computer-readable medium for performing the same</em>
+          </p>
+
+          <p class="patent-description">
+            A method for inferring medical prediction information from personal health records using an artificial-neural-network-based global model trained through federated learning.
+          </p>
+
+          <ul class="patent-details">
+            <li><strong>Applicant / Assignee:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
+            <li><strong>Inventors:</strong> 황보택근, 오기성, 김제현, 정원준, 최형선, 한일겸, <strong>김동석</strong></li>
+            <li><strong>Publication No.:</strong> 1020240167309</li>
+            <li><strong>Publication Date:</strong> 2024.11.26</li>
+          </ul>
+        </article>
+
+        <article class="patent-card">
+          <div class="patent-meta">
+            <span class="patent-status published">Published</span>
+            <span>Application No. 1020240070586</span>
+            <span>Application Date: 2024.05.30</span>
+            <span>Publication No. 1020250172991</span>
+            <span>Publication Date: 2025.12.10</span>
+          </div>
+
+          <h2>서버시스템 및 돌봄로봇을 통한 사용자 가변형 인지재활대화 제공방법, 및 이를 구현하기 위한 컴퓨터-판독가능 저장매체</h2>
+          <p class="patent-title-en">
+            <em>The method of providing user-variable cognitive rehabilitation conversation through a server system and care robot, and a computer-readable storage medium for implementing that</em>
+          </p>
+
+          <p class="patent-description">
+            A server-system and care-robot method for generating user-adaptive cognitive rehabilitation dialogue by deriving branching conditions from user speech and generating dialogue text based on stored interaction history.
+          </p>
+
+          <ul class="patent-details">
+            <li><strong>Applicant:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
+            <li><strong>Inventors:</strong> 황보택근, 오기성, 정원준, 최형선, <strong>김동석</strong></li>
+          </ul>
+        </article>
+
+        <article class="patent-card">
+          <div class="patent-meta">
+            <span class="patent-status registered">Registered</span>
+            <span>Application No. 1020230065176</span>
+            <span>Application Date: 2023.05.19</span>
+            <span>Registration No. 1028921520000</span>
+            <span>Registration Date: 2025.11.24</span>
+          </div>
+
+          <h2>연합학습을 통해 의료예측정보를 도출하는 모델을 학습시키는 방법 및 이를 수행하는 시스템, 컴퓨터-판독가능 매체</h2>
+          <p class="patent-title-en">
+            <em>The method that train a model that derive medical predictive information by federated learning, and the system and computer-readable medium for performing the same</em>
+          </p>
+
+          <p class="patent-description">
+            A federated-learning method for training a global medical prediction model by updating local models with medical data and augmented medical data, transmitting local parameters to a central server, and aggregating them into a global model.
+          </p>
+
+          <ul class="patent-details">
+            <li><strong>Applicant / Assignee:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
+            <li><strong>Inventors:</strong> 황보택근, 오기성, 김제현, 정원준, 최형선, 한일겸, <strong>김동석</strong></li>
+            <li><strong>Publication No.:</strong> 1020240167308</li>
+            <li><strong>Publication Date:</strong> 2024.11.26</li>
+            <li><strong>Citations:</strong> 2</li>
+          </ul>
+        </article>
+
+      </div>
     </section>
 
   </main>
 
 </body>
+</html>
 </html>
