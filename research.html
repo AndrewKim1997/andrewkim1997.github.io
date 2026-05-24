@@ -11,6 +11,220 @@
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .research-hero {
+      padding: 2.1rem 2.2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at top right, rgba(79, 70, 229, 0.08), transparent 32%),
+        linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.055);
+      margin-bottom: 2.6rem;
+    }
+
+    .research-eyebrow {
+      margin: 0 0 0.75rem 0;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4f46e5;
+    }
+
+    .research-title {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.05rem);
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+      color: #111827;
+    }
+
+    .research-subtitle {
+      margin-top: 1rem;
+      max-width: 800px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #4b5563;
+    }
+
+    .research-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.35rem;
+    }
+
+    .research-tags span {
+      display: inline-block;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .theme-card {
+      padding: 1.4rem 1.5rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      background: #ffffff;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .theme-card:hover {
+      transform: translateY(-2px);
+      border-color: #d1d5db;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.055);
+    }
+
+    .theme-icon {
+      width: 2.35rem;
+      height: 2.35rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: #f3f4f6;
+      color: #111827;
+      margin-bottom: 0.8rem;
+    }
+
+    .theme-card h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.08rem;
+      color: #111827;
+    }
+
+    .theme-card p {
+      margin: 0;
+      line-height: 1.68;
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    .question-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .question-item {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+      padding: 1rem 1.1rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      background: #ffffff;
+    }
+
+    .question-marker {
+      width: 1.7rem;
+      height: 1.7rem;
+      flex: 0 0 1.7rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .question-item p {
+      margin: 0;
+      line-height: 1.65;
+      color: #374151;
+    }
+
+    .philosophy-card {
+      padding: 1.5rem 1.6rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      background: #ffffff;
+    }
+
+    .philosophy-card p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      line-height: 1.75;
+      color: #4b5563;
+    }
+
+    .philosophy-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .related-card {
+      padding: 1.5rem 1.6rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at top right, rgba(17, 24, 39, 0.05), transparent 32%),
+        #ffffff;
+    }
+
+    .related-card p {
+      margin-top: 0;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+    .related-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.1rem;
+    }
+
+    .related-actions a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .related-actions a.primary {
+      background: #111827;
+      color: #ffffff;
+      border: 1px solid #111827;
+    }
+
+    .related-actions a.secondary {
+      background: #ffffff;
+      color: #111827;
+      border: 1px solid #d1d5db;
+    }
+
+    .related-actions a:hover {
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 900px) {
+      .research-hero {
+        padding: 1.6rem 1.4rem;
+      }
+
+      .theme-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -29,84 +243,177 @@
 
   <main class="sub-page">
 
-    <section class="content-section">
-      <h2>Research Overview</h2>
-      <p>
-        I am interested in developing machine learning methods that are not only
-        accurate, but also transparent, reliable, fair, and accountable. My work
-        is broadly motivated by high-stakes decision-making settings, where model
-        predictions can affect individuals and institutions in meaningful ways.
+    <section class="research-hero">
+      <p class="research-eyebrow">Research Statement</p>
+
+      <h1 class="research-title">
+        Trustworthy machine learning for explainable, uncertain, fair, and accountable decision-making.
+      </h1>
+
+      <p class="research-subtitle">
+        I study how machine learning systems can be explained, evaluated, and governed
+        in high-stakes settings where predictions affect individuals, institutions,
+        and real-world decisions.
       </p>
-      <p>
-        I am particularly interested in how explanation, uncertainty, and fairness
-        can be integrated into the design and evaluation of machine learning
-        systems. Rather than treating interpretability as an afterthought, I view
-        it as part of a broader question of how AI systems should be understood,
-        trusted, and governed.
-      </p>
+
+      <div class="research-tags">
+        <span>Explainable AI</span>
+        <span>Uncertainty Quantification</span>
+        <span>ML Fairness</span>
+        <span>AI Governance</span>
+        <span>AI Ethics</span>
+      </div>
     </section>
 
     <section class="content-section">
       <h2>Research Themes</h2>
 
-      <div class="research-item">
-        <h3>Explainable AI</h3>
-        <p>
-          I study how machine learning decisions can be explained in ways that
-          are faithful, useful, and appropriate for different users and decision
-          contexts. This includes interests in feature attribution, counterfactual
-          reasoning, explanation evaluation, and the limitations of post-hoc
-          interpretability methods.
-        </p>
-      </div>
+      <div class="theme-grid">
 
-      <div class="research-item">
-        <h3>Uncertainty Quantification</h3>
-        <p>
-          I am interested in how uncertainty can be represented and communicated
-          in machine learning systems. This includes uncertainty in model
-          predictions, explanations, evaluation procedures, and decision-support
-          settings where a single deterministic output may hide important
-          variation.
-        </p>
-      </div>
+        <article class="theme-card">
+          <div class="theme-icon">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
 
-      <div class="research-item">
-        <h3>ML Fairness</h3>
-        <p>
-          I examine how machine learning systems can produce unequal burdens,
-          errors, or outcomes across individuals and groups. My interests include
-          fairness evaluation, individual-level harms, error analysis, and the
-          relationship between fairness metrics and real-world decision impact.
-        </p>
-      </div>
+          <h3>Explainable AI</h3>
 
-      <div class="research-item">
-        <h3>AI Governance and AI Ethics</h3>
+          <p>
+            I study how machine learning decisions can be explained in faithful,
+            useful, and context-sensitive ways. My interests include feature
+            attribution, counterfactual reasoning, explanation evaluation, and
+            the limitations of post-hoc interpretability methods.
+          </p>
+        </article>
+
+        <article class="theme-card">
+          <div class="theme-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+
+          <h3>Uncertainty Quantification</h3>
+
+          <p>
+            I am interested in how uncertainty appears in predictions, explanations,
+            evaluations, and decision-support systems. I focus on cases where a
+            single deterministic output may hide important variation or instability.
+          </p>
+        </article>
+
+        <article class="theme-card">
+          <div class="theme-icon">
+            <i class="fa-solid fa-scale-balanced"></i>
+          </div>
+
+          <h3>ML Fairness</h3>
+
+          <p>
+            I examine how machine learning systems can produce unequal burdens,
+            errors, or outcomes across individuals and groups. My interests include
+            fairness evaluation, individual-level harms, error analysis, and the
+            relationship between fairness metrics and real-world decision impact.
+          </p>
+        </article>
+
+        <article class="theme-card">
+          <div class="theme-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+
+          <h3>AI Governance and AI Ethics</h3>
+
+          <p>
+            I study the broader governance and ethical implications of machine
+            learning systems, especially when they are deployed in sensitive or
+            institutionally important settings. This includes accountability,
+            transparency, contestability, and responsible use.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Core Research Questions</h2>
+
+      <div class="question-list">
+
+        <div class="question-item">
+          <span class="question-marker">1</span>
+          <p>
+            How can machine learning explanations be evaluated beyond surface-level
+            plausibility?
+          </p>
+        </div>
+
+        <div class="question-item">
+          <span class="question-marker">2</span>
+          <p>
+            How should uncertainty be represented when explanations, predictions,
+            or decisions are not stable?
+          </p>
+        </div>
+
+        <div class="question-item">
+          <span class="question-marker">3</span>
+          <p>
+            How can fairness evaluation account for individual burdens and
+            real-world decision impact?
+          </p>
+        </div>
+
+        <div class="question-item">
+          <span class="question-marker">4</span>
+          <p>
+            How should AI systems be governed when they are used in institutionally
+            sensitive decision-making settings?
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Research Philosophy</h2>
+
+      <div class="philosophy-card">
         <p>
-          I am interested in the broader governance and ethical implications of
-          machine learning systems, especially when they are deployed in sensitive
-          or institutionally important settings. This includes questions of
-          accountability, transparency, contestability, and responsible use.
+          I approach trustworthy AI as an interdisciplinary challenge that connects
+          Mathematics, Statistics, Computer Science, and the social and institutional
+          contexts in which AI systems are used. I am interested in how technical
+          performance, uncertainty, fairness, ethics, and governance can be studied
+          together rather than treated as separate issues.
+        </p>
+
+        <p>
+          My goal is to develop AI and ML methods that are theoretically grounded,
+          empirically validated, and practically meaningful for responsible
+          decision-making. I aim to contribute to transparent, reliable, fair, and
+          accountable intelligent systems across a wide range of real-world settings.
         </p>
       </div>
     </section>
 
     <section class="content-section">
-      <h2>Interdisciplinary Research Approach</h2>
-      <p>
-        I approach trustworthy AI as an interdisciplinary challenge that connects
-        Mathematics, Statistics, Computer Science, and the social and institutional
-        contexts in which AI systems are used. I am interested in how technical
-        performance, uncertainty, fairness, ethics, and governance can be studied
-        together rather than treated as separate issues.
-      </p>
-      <p>
-        My goal is to develop AI and ML methods that are theoretically grounded,
-        empirically validated, and practically meaningful for responsible
-        decision-making. I aim to contribute to transparent, reliable, fair, and
-        accountable intelligent systems across a wide range of real-world settings.
-      </p>
+      <h2>Related Work</h2>
+
+      <div class="related-card">
+        <p>
+          Selected publications, manuscripts, preprints, and patent records related
+          to these research directions are available through the pages below.
+        </p>
+
+        <div class="related-actions">
+          <a class="primary" href="publications.html">
+            <i class="fa-regular fa-file-lines"></i>
+            View Publications
+          </a>
+
+          <a class="secondary" href="patents.html">
+            <i class="fa-regular fa-lightbulb"></i>
+            View Patents
+          </a>
+        </div>
+      </div>
     </section>
 
   </main>
