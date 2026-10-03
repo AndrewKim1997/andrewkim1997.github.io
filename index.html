@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1/css/academicons.min.css">
 
   <!-- Main stylesheet -->
-  <link rel="stylesheet" href="style.css?v=20261004-layout">
+  <link rel="stylesheet" href="style.css?v=20261004-sidebar">
 </head>
 <body>
 
@@ -58,9 +58,9 @@
       </div>
     </aside>
 
-    <nav class="section-rail" aria-label="On this page">
-      <span class="section-rail-label">On this page</span>
+    <nav class="section-rail" aria-label="Section navigation">
       <div class="section-rail-links">
+        <a href="#about-me">About Me</a>
         <a href="#published-papers">Published Papers</a>
         <a href="#under-review">Under Review</a>
         <a href="#preprints">Preprints</a>
@@ -71,8 +71,8 @@
     </nav>
 
     <section class="home-content">
-      <section class="content-section biography-section">
-        <h2>About me</h2>
+      <section id="about-me" class="content-section biography-section">
+        <h2>About Me</h2>
 
         <p>
           Hello, I'm Dongseok Kim. I double-majored in Applied Statistics and Computer
@@ -281,7 +281,7 @@
             <span>Registration Date: 2026.04.10</span>
             </div>
 
-            <h2>Healing content background sound implementation system, method and computer-recordable medium on multimodal based metaverse</h2>
+            <h2>Healing Content Background Sound Implementation System, Method and Computer-Recordable Medium on Multimodal Based Metaverse</h2>
 
             <ul class="patent-details">
             <li><strong>Applicant:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
@@ -300,7 +300,7 @@
             <span>Registration Date: 2025.11.24</span>
             </div>
 
-            <h2>The method that augment medical data required for federated learning, and the system and computer-readable medium for performing the same</h2>
+            <h2>The Method That Augment Medical Data Required for Federated Learning, and the System and Computer-Readable Medium for Performing the Same</h2>
 
             <ul class="patent-details">
             <li><strong>Applicant:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
@@ -319,7 +319,7 @@
             <span>Registration Date: 2023.12.06</span>
             </div>
 
-            <h2>Multimodal-based metaverse environment implementation system, method and computer-recordable medium</h2>
+            <h2>Multimodal-Based Metaverse Environment Implementation System, Method and Computer-Recordable Medium</h2>
 
             <ul class="patent-details">
             <li><strong>Applicant:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
@@ -339,7 +339,7 @@
             <span>Registration Date: 2024.08.23</span>
             </div>
 
-            <h2>Medical twin sound realization system, method, and computer-recordable medium on multimodal-based metaverse</h2>
+            <h2>Medical Twin Sound Realization System, Method, and Computer-Recordable Medium on Multimodal-Based Metaverse</h2>
 
             <ul class="patent-details">
             <li><strong>Applicant:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
@@ -358,7 +358,7 @@
             <span>Registration Date: 2023.12.06</span>
             </div>
 
-            <h2>System, method and computer-recordable medium for implementing NPC actions on a multimodal-based metaverse</h2>
+            <h2>System, Method and Computer-Recordable Medium for Implementing NPC Actions on a Multimodal-Based Metaverse</h2>
 
             <ul class="patent-details">
             <li><strong>Applicant:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
@@ -377,7 +377,7 @@
             <span>Registration Date: 2025.11.24</span>
             </div>
 
-            <h2>The method that infer medical prediction information, and the system and computer-readable medium for performing the same</h2>
+            <h2>The Method That Infer Medical Prediction Information, and the System and Computer-Readable Medium for Performing the Same</h2>
 
             <ul class="patent-details">
             <li><strong>Applicant:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
@@ -396,7 +396,7 @@
             <span>Registration Date: 2025.11.24</span>
             </div>
 
-            <h2>The method that train a model that derive medical predictive information by federated learning, and the system and computer-readable medium for performing the same</h2>
+            <h2>The Method That Train a Model That Derive Medical Predictive Information by Federated Learning, and the System and Computer-Readable Medium for Performing the Same</h2>
 
             <ul class="patent-details">
             <li><strong>Applicant:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
@@ -422,7 +422,7 @@
             <span>Publication Date: 2025.12.10</span>
             </div>
 
-            <h2>The method of providing care information for elderly guardians through a server system and care robot, and a computer-readable storage medium for implementing that</h2>
+            <h2>The Method of Providing Care Information for Elderly Guardians through a Server System and Care Robot, and a Computer-Readable Storage Medium for Implementing That</h2>
 
             <ul class="patent-details">
             <li><strong>Applicant:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
@@ -441,7 +441,7 @@
             <span>Publication Date: 2026.01.09</span>
             </div>
 
-            <h2>The method, system, and computer-readable medium for internal organ 3D modeling based video</h2>
+            <h2>The Method, System, and Computer-Readable Medium for Internal Organ 3D Modeling Based Video</h2>
 
             <ul class="patent-details">
             <li><strong>Applicant:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
@@ -460,7 +460,7 @@
             <span>Publication Date: 2025.12.10</span>
             </div>
 
-            <h2>The method of providing user-variable cognitive rehabilitation conversation through a server system and care robot, and a computer-readable storage medium for implementing that</h2>
+            <h2>The Method of Providing User-Variable Cognitive Rehabilitation Conversation through a Server System and Care Robot, and a Computer-Readable Storage Medium for Implementing That</h2>
 
             <ul class="patent-details">
             <li><strong>Applicant:</strong> Gachon University Industry-Academic Cooperation Foundation</li>
@@ -598,6 +598,48 @@
     }, { rootMargin: '-25% 0px -55% 0px', threshold: [0.05, 0.2, 0.5] });
 
     pageSections.forEach((section) => observer.observe(section));
+
+    const sectionLinks = Array.from(document.querySelectorAll('.section-rail a[href^="#"]'));
+    const sectionTargets = sectionLinks.map((link) => document.querySelector(link.getAttribute('href')));
+
+    const updateSectionRail = () => {
+      const marker = Math.max(126, window.innerHeight * 0.35);
+      let currentIndex = 0;
+
+      sectionTargets.forEach((section, index) => {
+        if (section && section.getBoundingClientRect().top <= marker) {
+          currentIndex = index;
+        }
+      });
+
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+        currentIndex = sectionTargets.length - 1;
+      }
+
+      sectionLinks.forEach((link, index) => {
+        if (index === currentIndex) {
+          link.setAttribute('aria-current', 'location');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    };
+
+    let railUpdatePending = false;
+    const scheduleSectionRailUpdate = () => {
+      if (railUpdatePending) return;
+      railUpdatePending = true;
+      requestAnimationFrame(() => {
+        updateSectionRail();
+        railUpdatePending = false;
+      });
+    };
+
+    window.addEventListener('scroll', scheduleSectionRailUpdate, { passive: true });
+    window.addEventListener('resize', scheduleSectionRailUpdate);
+    window.addEventListener('hashchange', scheduleSectionRailUpdate);
+    window.addEventListener('load', scheduleSectionRailUpdate);
+    updateSectionRail();
   </script>
 </body>
 </html>

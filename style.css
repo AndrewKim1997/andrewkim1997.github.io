@@ -84,7 +84,7 @@ a:hover {
   padding: 72px 0 96px;
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
-  column-gap: 48px;
+  column-gap: 60px;
   row-gap: 20px;
   align-items: start;
 }
@@ -170,18 +170,8 @@ a:hover {
   grid-column: 2;
   grid-row: 1;
   min-width: 0;
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--line);
-}
-
-.section-rail-label {
-  flex: none;
-  color: var(--heading);
-  font-size: 13px;
-  font-weight: 650;
 }
 
 .section-rail-links {
@@ -202,11 +192,16 @@ a:hover {
   text-decoration: underline;
 }
 
+.section-rail a[aria-current="location"] {
+  color: var(--heading);
+  font-weight: 650;
+}
+
 @media (min-width: 1320px) {
   .home-page {
     width: min(1440px, calc(100% - 48px));
     grid-template-columns: 220px minmax(0, 1fr) 160px;
-    column-gap: 28px;
+    column-gap: 40px;
     row-gap: 0;
   }
 
@@ -231,11 +226,6 @@ a:hover {
     padding: 0 0 0 16px;
     border-bottom: 0;
     border-left: 1px solid var(--line);
-  }
-
-  .section-rail-label {
-    display: block;
-    margin-bottom: 12px;
   }
 
   .section-rail-links {
@@ -296,6 +286,7 @@ a:hover {
   padding-top: 8px;
 }
 
+.biography-section[id],
 .publication-group[id],
 .patent-group[id] {
   scroll-margin-top: 78px;
@@ -485,6 +476,7 @@ a:hover {
   }
 
   .page-anchor,
+  .biography-section[id],
   .publication-group[id],
   .patent-group[id] {
     scroll-margin-top: 126px;
@@ -494,8 +486,4 @@ a:hover {
     display: block;
   }
 
-  .section-rail-label {
-    display: block;
-    margin-bottom: 8px;
-  }
 }
